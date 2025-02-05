@@ -1,10 +1,13 @@
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 using Application.Contracts.Services;
 using Application.DTO_s;
 using Domain.Constants;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MobileApp.Controllers;
+namespace WebAPI.Controllers;
 
 [Route("/api/auth/")]
 public sealed class AuthController(IAuthService service) : BaseController

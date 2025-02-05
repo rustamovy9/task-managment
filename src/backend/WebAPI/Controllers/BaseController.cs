@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 using MobileApp.HelpersApi.ApiConventions;
 
-namespace MobileApp.Controllers;
+namespace WebAPI.Controllers;
 
 [ApiController]
 [ApiConventionType(typeof(CustomApiConventions))]
