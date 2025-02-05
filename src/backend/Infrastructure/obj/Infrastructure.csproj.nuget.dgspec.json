@@ -1,40 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Application\\Application.csproj": {
+    "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\VICTUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Application\\obj\\",
+        "projectPath": "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\VICTUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Domain\\Domain.csproj"
+              "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -82,33 +75,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Domain\\Domain.csproj": {
+    "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\VICTUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\VICTUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -142,41 +128,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\VICTUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\VICTUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Application\\Application.csproj"
+              "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Application\\Application.csproj"
               }
             }
           }
@@ -228,7 +207,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

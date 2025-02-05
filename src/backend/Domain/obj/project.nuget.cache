@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q98lNJtNq58T7db+TfUo1cRI4JtyKdpBZjx6x+E8cOqkpeAQhBVM0oBLkQyUJypPM02eArjKsVCiOcZypkHLYA==",
+  "dgSpecHash": "jQMbXJQZziWcNND/yYO/oY8lWSDCmAaxYAIJRNzqXlOY4RmA4DuSRlJvXtTL++2HRD9c8CVKDDJ4ikfkN0ZFqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\VICTUS\\OneDrive\\Desktop\\TaskManagment\\src\\backend\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\task-managment\\src\\backend\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
