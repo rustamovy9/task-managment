@@ -135,10 +135,7 @@ public class GenericRepository<T>(DataContext dbContext) : IGenericRepository<T>
             if (existing == null)
                 return Result<int>.Failure(Error.NotFound());
 
-            dbContext.Entry(existing).CurrentValues.SetValues(value);
-
-            if (dbContext.Entry(existing).State == EntityState.Unchanged)
-                return Result<int>.Success(1);
+            dbContext.Set<T>().Update(existing);
 
             int res = await dbContext.SaveChangesAsync();
             return res > 0
