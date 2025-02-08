@@ -4,7 +4,7 @@ using Application.DTO_s;
 using Application.Filters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MobileApp.HelpersApi.Extensions.ResultPattern;
+using WebAPI.HelpersApi.Extensions.ResultPattern;
 
 namespace WebAPI.Controllers;
 

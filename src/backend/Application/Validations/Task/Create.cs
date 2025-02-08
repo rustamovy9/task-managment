@@ -1,35 +1,30 @@
-﻿// using Application.DTO_s;
-// using FluentValidation;
-//
-// namespace Application.Validations.Booking;
-//
-// public class Create : AbstractValidator<BookingCreateInfo>
-// {
-//     public Create()
-//     {
-//         // UserId должен быть положительным числом
-//         RuleFor(booking => booking.UserId)
-//             .GreaterThan(0).WithMessage("UserId must be greater than 0.");
-//
-//         // CarId должен быть положительным числом
-//         RuleFor(booking => booking.CarId)
-//             .GreaterThan(0).WithMessage("CarId must be greater than 0.");
-//
-//         // StartDateTime должен быть раньше EndDateTime
-//         RuleFor(booking => booking)
-//             .Must(booking => booking.StartDateTime < booking.EndDateTime)
-//             .WithMessage("StartDateTime must be earlier than EndDateTime.");
-//
-//         // PickupLocation не может быть пустым
-//         RuleFor(booking => booking.PickupLocation)
-//             .NotEmpty().WithMessage("PickupLocation is required.");
-//
-//         // DropOffLocation не может быть пустым
-//         RuleFor(booking => booking.DropOffLocation)
-//             .NotEmpty().WithMessage("DropOffLocation is required.");
-//
-//         // Проверка, что время бронирования не в прошлом
-//         RuleFor(booking => booking.StartDateTime)
-//             .GreaterThanOrEqualTo(DateTime.Now).WithMessage("StartDateTime must not be in the past.");
-//     }
-// }
+﻿using Application.DTO_s;
+using FluentValidation;
+
+namespace Application.Validations.Task;
+
+public class Create : AbstractValidator<TaskCreateInfo>
+{
+    public Create()
+    {
+        RuleFor(t => t.Title)
+            .NotEmpty().WithMessage("Title is required.")
+            .MaximumLength(100).WithMessage("Title must be at most 100 characters.");
+        
+        RuleFor(t => t.Description)
+            .NotEmpty().WithMessage("Description is required.")
+            .MaximumLength(500).WithMessage("Description must be at most 500 characters.");
+        
+        RuleFor(t => t.Status)
+            .IsInEnum().WithMessage("Invalid status value.");
+        
+        RuleFor(t => t.Priority)
+            .IsInEnum().WithMessage("Invalid priority value.");
+        
+        RuleFor(t => t.DeadLine)
+            .GreaterThan(DateTimeOffset.UtcNow).WithMessage("Deadline must be in the future.");
+        
+        RuleFor(t => t.AssignedToUserId)
+            .GreaterThan(0).WithMessage("Assigned user ID must be greater than 0.");
+    }
+}

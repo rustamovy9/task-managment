@@ -21,5 +21,20 @@ public sealed class UserConfig : IEntityTypeConfiguration<User>
             .WithOne(ur => ur.User)
             .HasForeignKey(ur => ur.UserId)
             .OnDelete(DeleteBehavior.Cascade);
+        
+        builder.HasMany(u => u.Tasks)
+            .WithOne(t => t.User)
+            .HasForeignKey(t => t.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
+        
+        builder.HasMany(u => u.Comments)
+            .WithOne(c => c.User)
+            .HasForeignKey(c => c.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
+        
+        builder.HasMany(u => u.TaskHistories)
+            .WithOne(th => th.User)
+            .HasForeignKey(th => th.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

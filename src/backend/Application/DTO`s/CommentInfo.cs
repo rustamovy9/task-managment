@@ -13,13 +13,13 @@ public readonly record struct CommentReadInfo(
     int TaskId,  
     int Id):IBaseCommentInfo;
 
-public readonly record struct CommentCreateInfo(
+public  record  CommentCreateInfo(
     string Content,
     int UserId,
     int TaskId) : IBaseCommentInfo;
 
 
-public readonly record struct CommentUpdateInfo(
+public  record  CommentUpdateInfo(
     string Content,
     int UserId,
     int TaskId) : IBaseCommentInfo;

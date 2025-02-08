@@ -11,7 +11,7 @@ public static class CommentMapper
         return new CommentReadInfo(
             comment.Content,
             comment.UserId,
-            comment.TaskId,
+            comment.TasksId,
             comment.Id
         );
     }
@@ -23,7 +23,7 @@ public static class CommentMapper
         {
             Content = createInfo.Content,
             UserId = createInfo.UserId,
-            TaskId = createInfo.TaskId
+            TasksId = createInfo.TaskId
         };
     }
 
@@ -31,7 +31,7 @@ public static class CommentMapper
     {
         entity.Content = updateInfo.Content;
         entity.UserId = updateInfo.UserId;
-        entity.TaskId = updateInfo.TaskId;
+        entity.TasksId = updateInfo.TaskId;
         entity.Version++;
         entity.UpdatedAt = DateTimeOffset.UtcNow;
         return entity;

@@ -5,7 +5,7 @@ using Application.Filters;
 using Domain.Constants;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MobileApp.HelpersApi.Extensions.ResultPattern;
+using WebAPI.HelpersApi.Extensions.ResultPattern;
 
 namespace WebAPI.Controllers;
 

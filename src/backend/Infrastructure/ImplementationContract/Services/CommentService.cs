@@ -1,5 +1,4 @@
 ﻿using System.Linq.Expressions;
-using System.Runtime.InteropServices;
 using Application.Contracts.Repositories;
 using Application.Contracts.Services;
 using Application.DTO_s;
@@ -8,7 +7,6 @@ using Application.Extensions.Responses.PagedResponse;
 using Application.Extensions.ResultPattern;
 using Application.Filters;
 using Domain.Common;
-using Domain.Constants;
 using Domain.Entities;
 using Infrastructure.Extensions;
 
@@ -23,7 +21,7 @@ public class CommentService (ICommentRepository repository,ICommentConflictValid
                 Expression<Func<Comment, bool>> filterExpression = car =>
                     (string.IsNullOrEmpty(filter.Content) || car.Content.ToLower().Contains(filter.Content.ToLower())) &&
                     (filter.UserId == null || car.UserId == filter.UserId) &&
-                    (filter.TaskId == null || car.TaskId == filter.TaskId);
+                    (filter.TaskId == null || car.TasksId == filter.TaskId);
 
             Result<IQueryable<Comment>> request = repository
                 .Find(filterExpression);

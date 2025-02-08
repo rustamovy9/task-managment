@@ -15,4 +15,5 @@ public sealed class Tasks : BaseEntity
     public User User { get; set; } = default!;
 
     public ICollection<Comment> Comments { get; set; }
+    public ICollection<TaskHistory> TaskHistories { get; set; }
 }

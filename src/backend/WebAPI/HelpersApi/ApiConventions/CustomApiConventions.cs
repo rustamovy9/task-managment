@@ -1,7 +1,7 @@
 ﻿using Domain.Common;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MobileApp.HelpersApi.ApiConventions;
+namespace WebAPI.HelpersApi.ApiConventions;
 
 public static class CustomApiConventions
 {

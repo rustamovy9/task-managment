@@ -1,4 +1,4 @@
-using MobileApp.HelpersApi.Extensions.DI;
+using WebAPI.HelpersApi.Extensions.DI;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 

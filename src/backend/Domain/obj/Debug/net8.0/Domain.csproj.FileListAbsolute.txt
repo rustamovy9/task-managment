@@ -33,3 +33,15 @@ C:\Users\LENOVO\Desktop\task-managment\src\backend\Domain\obj\Debug\net8.0\Domai
 C:\Users\LENOVO\Desktop\task-managment\src\backend\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Users\LENOVO\Desktop\task-managment\src\backend\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Users\LENOVO\Desktop\task-managment\src\backend\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:\Users\VICTUS\OneDrive\Desktop\task-managment\src\backend\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\VICTUS\OneDrive\Desktop\task-managment\src\backend\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\VICTUS\OneDrive\Desktop\task-managment\src\backend\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\VICTUS\OneDrive\Desktop\task-managment\src\backend\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VICTUS\OneDrive\Desktop\task-managment\src\backend\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\VICTUS\OneDrive\Desktop\task-managment\src\backend\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\VICTUS\OneDrive\Desktop\task-managment\src\backend\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\VICTUS\OneDrive\Desktop\task-managment\src\backend\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Users\VICTUS\OneDrive\Desktop\task-managment\src\backend\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\VICTUS\OneDrive\Desktop\task-managment\src\backend\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\VICTUS\OneDrive\Desktop\task-managment\src\backend\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\VICTUS\OneDrive\Desktop\task-managment\src\backend\Domain\obj\Debug\net8.0\ref\Domain.dll

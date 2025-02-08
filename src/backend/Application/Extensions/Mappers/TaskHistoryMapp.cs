@@ -11,7 +11,7 @@ public static class TaskHistoryMapper
         return new TaskHistoryReadInfo(
             taskHistory.ChangeDescription,
             taskHistory.ChangedAt,
-            taskHistory.TaskId,
+            taskHistory.TasksId,
             taskHistory.UserId,
             taskHistory.Id
         );
@@ -24,7 +24,7 @@ public static class TaskHistoryMapper
         {
             ChangeDescription = createInfo.ChangeDescription,
             ChangedAt = DateTimeOffset.UtcNow,
-            TaskId = createInfo.TaskId,
+            TasksId = createInfo.TaskId,
             UserId = createInfo.UserId
         };
     }
@@ -33,7 +33,7 @@ public static class TaskHistoryMapper
     {
         entity.ChangeDescription = updateInfo.ChangeDescription;
         entity.ChangedAt = updateInfo.ChangedAt;
-        entity.TaskId = updateInfo.TaskId;
+        entity.TasksId = updateInfo.TaskId;
         entity.UserId = updateInfo.UserId;
         entity.Version++;
         entity.UpdatedAt = DateTimeOffset.UtcNow;

@@ -15,13 +15,13 @@ public readonly record struct TaskHistoryReadInfo(
     int UserId,
     int Id):IBaseTaskHistoryInfo;
 
-public readonly record struct TaskHistoryCreateInfo(
+public  record  TaskHistoryCreateInfo(
     string ChangeDescription,
     DateTimeOffset ChangedAt,
     int TaskId,
     int UserId) : IBaseTaskHistoryInfo;
 
-public readonly record struct TaskHistoryUpdateInfo(
+public  record  TaskHistoryUpdateInfo(
     string ChangeDescription,
     DateTimeOffset ChangedAt,
     int TaskId,

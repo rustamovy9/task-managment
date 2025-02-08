@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250205113450_test")]
-    partial class test
+    [Migration("20250207124616_commit1")]
+    partial class commit1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,7 +50,7 @@ namespace Infrastructure.DataAccess.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
-                    b.Property<int>("TaskId")
+                    b.Property<int>("TasksId")
                         .HasColumnType("integer");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
@@ -64,7 +64,7 @@ namespace Infrastructure.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TaskId");
+                    b.HasIndex("TasksId");
 
                     b.HasIndex("UserId");
 
@@ -138,12 +138,6 @@ namespace Infrastructure.DataAccess.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
-                    b.Property<int?>("TaskHistoryId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("TaskId")
-                        .HasColumnType("integer");
-
                     b.Property<int>("TasksId")
                         .HasColumnType("integer");
 
@@ -157,8 +151,6 @@ namespace Infrastructure.DataAccess.Migrations
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TaskHistoryId");
 
                     b.HasIndex("TasksId");
 
@@ -331,31 +323,27 @@ namespace Infrastructure.DataAccess.Migrations
 
             modelBuilder.Entity("Domain.Entities.Comment", b =>
                 {
-                    b.HasOne("Domain.Entities.Tasks", "Tasks")
+                    b.HasOne("Domain.Entities.Tasks", "Task")
                         .WithMany("Comments")
-                        .HasForeignKey("TaskId")
+                        .HasForeignKey("TasksId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Domain.Entities.User", "User")
                         .WithMany("Comments")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Tasks");
+                    b.Navigation("Task");
 
                     b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entities.TaskHistory", b =>
                 {
-                    b.HasOne("Domain.Entities.TaskHistory", null)
+                    b.HasOne("Domain.Entities.Tasks", "Task")
                         .WithMany("TaskHistories")
-                        .HasForeignKey("TaskHistoryId");
-
-                    b.HasOne("Domain.Entities.Tasks", "Tasks")
-                        .WithMany()
                         .HasForeignKey("TasksId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -366,7 +354,7 @@ namespace Infrastructure.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Tasks");
+                    b.Navigation("Task");
 
                     b.Navigation("User");
                 });
@@ -406,14 +394,11 @@ namespace Infrastructure.DataAccess.Migrations
                     b.Navigation("UserRoles");
                 });
 
-            modelBuilder.Entity("Domain.Entities.TaskHistory", b =>
-                {
-                    b.Navigation("TaskHistories");
-                });
-
             modelBuilder.Entity("Domain.Entities.Tasks", b =>
                 {
                     b.Navigation("Comments");
+
+                    b.Navigation("TaskHistories");
                 });
 
             modelBuilder.Entity("Domain.Entities.User", b =>

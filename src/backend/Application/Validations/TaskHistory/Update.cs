@@ -1,19 +1,23 @@
-// using Application.DTO_s;
-// using FluentValidation;
-//
-// namespace Application.Validations.RentalCompany;
-//
-// public class Update : AbstractValidator<RentalCompanyUpdateInfo>
-// {
-//     public Update()
-//     {
-//         // Имя компании не должно быть пустым и длина не более 100 символов
-//         RuleFor(company => company.Name)
-//             .NotEmpty().WithMessage("Name is required.")
-//             .MaximumLength(100).WithMessage("Name must not exceed 100 characters.");
-//
-//         // ContactInfo не может быть длиннее 200 символов, если указано
-//         RuleFor(company => company.ContactInfo)
-//             .MaximumLength(200).WithMessage("ContactInfo must not exceed 200 characters.");
-//     }
-// }
+using Application.DTO_s;
+using FluentValidation;
+
+namespace Application.Validations.TaskHistory;
+
+public class Update : AbstractValidator<TaskHistoryCreateInfo>
+{
+    public Update()
+    {
+        RuleFor(t => t.ChangeDescription)
+            .NotEmpty().WithMessage("Change description is required.")
+            .MaximumLength(500).WithMessage("Change description must be at most 500 characters.");
+        
+        RuleFor(t => t.ChangedAt)
+            .LessThanOrEqualTo(DateTimeOffset.UtcNow).WithMessage("Change date cannot be in the future.");
+        
+        RuleFor(t => t.TaskId)
+            .GreaterThan(0).WithMessage("Task ID must be greater than 0.");
+        
+        RuleFor(t => t.UserId)
+            .GreaterThan(0).WithMessage("User ID must be greater than 0.");
+    }
+}

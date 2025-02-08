@@ -4,7 +4,7 @@ using Domain.Entities;
 using Infrastructure.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
-namespace MobileApp.HelpersApi.Extensions.Seed;
+namespace WebAPI.HelpersApi.Extensions.Seed;
 
 public class Seeder(DataContext dbContext)
 {

@@ -2,7 +2,7 @@
 using FluentValidation.Results;
 using MediatR;
 
-namespace MobileApp.HelpersApi.Extensions.FluentValidation;
+namespace WebAPI.HelpersApi.Extensions.FluentValidation;
 
 public class ValidationBehavior<TRequest, TResponse>(IEnumerable<IValidator<TRequest>> validators)
     : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull

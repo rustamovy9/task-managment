@@ -8,8 +8,8 @@ using Application.Extensions.ResultPattern;
 using Application.Filters;
 using Domain.Common;
 using Domain.Entities;
-using Domain.Enums;
 using Infrastructure.Extensions;
+using Task = System.Threading.Tasks.Task;
 
 namespace Infrastructure.ImplementationContract.Services;
 

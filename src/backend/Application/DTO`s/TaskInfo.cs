@@ -23,7 +23,7 @@ public readonly record struct TaskReadInfo(
     int Id):IBaseTaskInfo;
 
 
-public readonly record struct TaskCreateInfo(
+public  record  TaskCreateInfo(
     string Title,
     string Description,
     Status Status,
@@ -33,7 +33,7 @@ public readonly record struct TaskCreateInfo(
 
 
 
-public readonly record struct TaskUpdateInfo(
+public  record  TaskUpdateInfo(
     string Title,
     string Description,
     Status Status,

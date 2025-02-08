@@ -14,10 +14,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using MobileApp.HelpersApi.Extensions.FluentValidation;
-using MobileApp.HelpersApi.Extensions.Seed;
+using WebAPI.HelpersApi.Extensions.FluentValidation;
+using WebAPI.HelpersApi.Extensions.Seed;
 
-namespace MobileApp.HelpersApi.Extensions.DI;
+namespace WebAPI.HelpersApi.Extensions.DI;
 
 public static class RegisterService
 {
@@ -129,7 +129,7 @@ public static class RegisterService
         builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
         builder.Services.AddScoped<IAuthService, AuthService>();
         builder.Services.AddScoped<ITaskService, TaskService>();
-        // builder.Services.AddScoped<ITaskHistoryService, TaskHistoryService>();
+        builder.Services.AddScoped<ITaskHistoryService, TaskHistoryService>();
         builder.Services.AddScoped<ICommentService, CommentService>();
         builder.Services.AddScoped<IUserService, UserService>();
         builder.Services.AddScoped<IUserRoleService, UserRoleService>();
@@ -138,6 +138,7 @@ public static class RegisterService
         builder.Services.AddScoped<Seeder>();
         builder.Services.AddScoped<ICommentConflictValidator, CommentConflictValidator>();
         builder.Services.AddScoped<ITaskConflictValidator, TaskConflictValidator>();
+        builder.Services.AddScoped<ITaskHistoryConflictValidator, TaskHistoryConflictValidator>();
 
         //registration validation
         builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());

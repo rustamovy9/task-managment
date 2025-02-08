@@ -19,9 +19,9 @@ public sealed class CommentConfig : IEntityTypeConfiguration<Comment>
             .HasMaxLength(200); 
         
 
-        builder.HasOne(c => c.Tasks)
+        builder.HasOne(c => c.Task)
             .WithMany(t => t.Comments) 
-            .HasForeignKey(c => c.TaskId) 
+            .HasForeignKey(c => c.TasksId) 
             .OnDelete(DeleteBehavior.Cascade); 
 
         

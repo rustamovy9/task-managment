@@ -1,30 +1,43 @@
-﻿// using Domain.Entities;
-// using Microsoft.EntityFrameworkCore;
-// using Microsoft.EntityFrameworkCore.Metadata.Builders;
-//
-// namespace Infrastructure.DataAccess.EntityConfigurations;
-//
-// public sealed class TaskConfig : IEntityTypeConfiguration<Booking>
-// {
-//     public void Configure(EntityTypeBuilder<Booking> builder)
-//     {
-//         builder.Property(c => c.Status)
-//             .HasConversion<int>();
-//         
-//         builder.HasKey(b => b.Id);
-//         builder.Property(c => c.Id).ValueGeneratedOnAdd();
-//
-//         builder.Property(b => b.PickupLocation).HasMaxLength(200);
-//         builder.Property(b => b.DropOffLocation).HasMaxLength(200);
-//
-//         builder.HasOne(b => b.User)
-//             .WithMany()
-//             .HasForeignKey(b => b.UserId)
-//             .OnDelete(DeleteBehavior.Cascade);
-//
-//         builder.HasOne(b => b.Car)
-//             .WithMany()
-//             .HasForeignKey(b => b.CarId)
-//             .OnDelete(DeleteBehavior.Cascade);
-//     }
-// }
+﻿using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace Infrastructure.DataAccess.EntityConfigurations;
+
+public class TasksConfiguration : IEntityTypeConfiguration<Tasks>
+{
+    public void Configure(EntityTypeBuilder<Tasks> builder)
+    {
+        builder.HasKey(t => t.Id);
+        
+        builder.Property(t => t.Title)
+            .IsRequired();
+        
+        builder.Property(t => t.Description)
+            .IsRequired();
+        
+        builder.Property(t => t.Status)
+            .IsRequired();
+        
+        builder.Property(t => t.Priority)
+            .IsRequired();
+        
+        builder.Property(t => t.DeadLine)
+            .IsRequired();
+        
+        builder.HasOne(t => t.User)
+            .WithMany()
+            .HasForeignKey(t => t.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
+        
+        builder.HasMany(t => t.Comments)
+            .WithOne(c=>c.Task)
+            .HasForeignKey(c=>c.TasksId)
+            .OnDelete(DeleteBehavior.Cascade);
+        
+        builder.HasMany(t => t.TaskHistories)
+            .WithOne(th => th.Task)
+            .HasForeignKey(th => th.TasksId)
+            .OnDelete(DeleteBehavior.Cascade);
+    }
+}

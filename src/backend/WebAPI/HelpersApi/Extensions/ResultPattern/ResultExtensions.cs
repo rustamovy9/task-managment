@@ -3,7 +3,7 @@ using Application.Extensions.ResultPattern;
 using Domain.Enums;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MobileApp.HelpersApi.Extensions.ResultPattern;
+namespace WebAPI.HelpersApi.Extensions.ResultPattern;
 
 public static class ResultExtensions
 {
